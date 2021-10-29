@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RatesList</string>
+    <string name="rate_list_fragment_name">Rates List</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="dialog_error_title">Ups! Coś poszło nie tak… .</string>
+    <string name="dialog_error_close_btn">Zamknij</string>
+    <string name="floatng_btn_scroll_up_desctiption">Go up!</string>
 </resources>

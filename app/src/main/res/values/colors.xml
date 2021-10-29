@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="rate_item">#FFE4D1</color>
+    <color name="rate_date">#F19F9A</color>
+    <color name="addicional_color">#FF827B</color>
+
 </resources>

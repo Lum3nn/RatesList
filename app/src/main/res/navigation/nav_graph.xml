@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rateListFragment">
+
+    <fragment
+        android:id="@+id/rateListFragment"
+        tools:layout="@layout/rate_list_fragment"
+        android:name="com.lumen.rateslist.ui.list.RateListFragment"
+        android:label="@string/rate_list_fragment_name" >
+        <action
+            android:id="@+id/action_rateListFragment_to_rateDetailFragment"
+            app:destination="@id/rateDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/rateDetailFragment"
+        android:name="com.lumen.rateslist.ui.detail.RateDetailFragment"
+        android:label="{rateName}">
+        <argument
+            android:name="rateName"
+            app:argType="string" />
+        <argument
+            android:name="rateValue"
+            app:argType="float" />
+        <argument
+            android:name="rateDate"
+            app:argType="string" />
+    </fragment>
+</navigation>
