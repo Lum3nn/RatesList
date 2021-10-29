@@ -1,7 +1,5 @@
 package com.lumen.rateslist.ui.list.item
 
-data class Rate(
-    val name: String,
-    val value: Float,
+data class DateItem(
     val date: String
 ) : RatesListItem

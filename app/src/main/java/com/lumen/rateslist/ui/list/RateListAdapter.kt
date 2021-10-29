@@ -11,8 +11,8 @@ import com.lumen.rateslist.databinding.RateDateItemBinding
 import com.lumen.rateslist.databinding.RateDateLoadingItemBinding
 import com.lumen.rateslist.databinding.RateItemBinding
 import com.lumen.rateslist.repository.EmojiRepository
-import com.lumen.rateslist.ui.list.item.Date
-import com.lumen.rateslist.ui.list.item.Rate
+import com.lumen.rateslist.ui.list.item.DateItem
+import com.lumen.rateslist.ui.list.item.RateItem
 import com.lumen.rateslist.ui.list.item.RatesListItem
 
 class RateListAdapter(
@@ -30,9 +30,9 @@ class RateListAdapter(
             override fun areItemsTheSame(
                 oldItem: RatesListItem, newItem: RatesListItem
             ): Boolean {
-                if (oldItem is Rate && newItem is Rate) {
+                if (oldItem is RateItem && newItem is RateItem) {
                     return oldItem == newItem
-                } else if (oldItem is Date && newItem is Date) {
+                } else if (oldItem is DateItem && newItem is DateItem) {
                     return oldItem.date == newItem.date
                 }
                 return false
@@ -47,8 +47,8 @@ class RateListAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
-            is Date -> TYPE_DATE
-            is Rate -> TYPE_RATE
+            is DateItem -> TYPE_DATE
+            is RateItem -> TYPE_RATE
             else -> TYPE_LOADING
         }
     }
@@ -77,7 +77,7 @@ class RateListAdapter(
     }
 
     interface OnRateItemClickListener {
-        fun onClick(rateItem: Rate)
+        fun onClick(rateItem: RateItem)
     }
 
     abstract class RatesListItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -95,7 +95,7 @@ class RateListAdapter(
     ) : RatesListItemViewHolder(binding.root) {
 
         override fun bind(data: RatesListItem) {
-            val dataData = data as Date
+            val dataData = data as DateItem
             binding.rateDate.text = dataData.date
         }
     }
@@ -106,7 +106,7 @@ class RateListAdapter(
     ) : RatesListItemViewHolder(binding.root) {
 
         override fun bind(data: RatesListItem) {
-            val dataRate = data as Rate
+            val dataRate = data as RateItem
             val name = dataRate.name
             val value = dataRate.value
             val emojiCode = EmojiRepository.getEmojiCode(name)

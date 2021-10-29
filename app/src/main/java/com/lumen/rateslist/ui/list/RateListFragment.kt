@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.lumen.rateslist.databinding.RateListFragmentBinding
-import androidx.navigation.fragment.findNavController
 import com.lumen.rateslist.EventObserver
 import com.lumen.rateslist.R
-import com.lumen.rateslist.ui.list.item.Rate
+import com.lumen.rateslist.databinding.RateListFragmentBinding
+import com.lumen.rateslist.ui.list.item.RateItem
 
 class RateListFragment : Fragment(), RateListAdapter.OnRateItemClickListener {
 
@@ -85,7 +85,7 @@ class RateListFragment : Fragment(), RateListAdapter.OnRateItemClickListener {
         }
     }
 
-    override fun onClick(rateItem: Rate) {
+    override fun onClick(rateItem: RateItem) {
         val action =
             RateListFragmentDirections.actionRateListFragmentToRateDetailFragment(
                 rateItem.name,
