@@ -1,6 +1,6 @@
 # RatesList
 
-![Alt text](<main>/path/to/ScreenShot.png?raw=true "Optional Title")
+![Alt text](screenShot1.png?raw=true "Optional Title")
 
 
 Aplikacja pobierajaca i wyświetlająca aktualne kursy walut z serwisu https://fixer.io/ względem waluty EURO. 
