@@ -1,8 +1,5 @@
 # RatesList
 
-![Alt text](screenShot1.png?raw=true "Optional Title")
-
-
 Aplikacja pobierajaca i wyświetlająca aktualne kursy walut z serwisu https://fixer.io/ względem waluty EURO. 
 Wykorzystane w projekcie biblioteki: 
 - Retrofit
@@ -17,3 +14,5 @@ https://github.com/Lum3nn/RatesList/blob/main/app/src/main/java/com/lumen/ratesl
 
 
 Testy jednostkowe dostępne są w domyślnym katalogu Test
+
+<img src="scrrenShot1.png?raw=true" width="480">
