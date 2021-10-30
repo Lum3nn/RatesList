@@ -14,9 +14,10 @@ import com.lumen.rateslist.ui.list.item.RateItem
 import com.lumen.rateslist.ui.list.item.RatesListItem
 import kotlinx.coroutines.launch
 
-class RateListViewModel : ViewModel() {
-
+class RateListViewModel(
     private val rateRepository: RateRepository = RateFixerRepository()
+) : ViewModel() {
+
     private var lastFetchDate: String = ""
     private var isDataLoading = false
 
