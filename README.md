@@ -1,5 +1,8 @@
 # RatesList
 
+![Alt text](<main>/path/to/ScreenShot.png?raw=true "Optional Title")
+
+
 Aplikacja pobierajaca i wyświetlająca aktualne kursy walut z serwisu https://fixer.io/ względem waluty EURO. 
 Wykorzystane w projekcie biblioteki: 
 - Retrofit
