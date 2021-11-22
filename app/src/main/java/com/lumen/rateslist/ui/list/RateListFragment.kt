@@ -15,7 +15,9 @@ import com.lumen.rateslist.EventObserver
 import com.lumen.rateslist.R
 import com.lumen.rateslist.databinding.RateListFragmentBinding
 import com.lumen.rateslist.ui.list.item.RateItem
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RateListFragment : Fragment(), RateListAdapter.OnRateItemClickListener {
 
     private var _binding: RateListFragmentBinding? = null

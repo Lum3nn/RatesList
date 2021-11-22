@@ -12,11 +12,16 @@ import com.lumen.rateslist.ui.list.item.DateItem
 import com.lumen.rateslist.ui.list.item.Loading
 import com.lumen.rateslist.ui.list.item.RateItem
 import com.lumen.rateslist.ui.list.item.RatesListItem
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RateListViewModel(
-    private val rateRepository: RateRepository = RateFixerRepository()
+@HiltViewModel
+class RateListViewModel @Inject constructor(
+     private val rateRepository: RateRepository
 ) : ViewModel() {
+
 
     private var lastFetchDate: String = ""
     private var isDataLoading = false
