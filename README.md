@@ -1,11 +1,14 @@
 # RatesList
 
+![imgTransition](https://media.giphy.com/media/Nn1DL2uSXaTh2cZoJG/giphy.gif)
+
 Aplikacja pobierajaca i wyświetlająca aktualne kursy walut z serwisu https://fixer.io/ względem waluty EURO. 
 Wykorzystane w projekcie biblioteki: 
 - Retrofit
 - Hilt (Dependency Ijection)
 - ViewBinding
 - LiveData
+- Room
 - Navigation Component
 - Swiperefreshlayout
 

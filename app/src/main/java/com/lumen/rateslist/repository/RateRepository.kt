@@ -24,4 +24,5 @@ interface RateRepository {
     }
 
     suspend fun listRate(date: String): RateResponse
+    suspend fun deleteAllRates()
 }

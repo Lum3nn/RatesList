@@ -6,13 +6,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lumen.rateslist.Event
 import com.lumen.rateslist.model.RateResponse
-import com.lumen.rateslist.repository.RateFixerRepository
 import com.lumen.rateslist.repository.RateRepository
 import com.lumen.rateslist.ui.list.item.DateItem
 import com.lumen.rateslist.ui.list.item.Loading
 import com.lumen.rateslist.ui.list.item.RateItem
 import com.lumen.rateslist.ui.list.item.RatesListItem
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -69,7 +67,10 @@ class RateListViewModel @Inject constructor(
     fun reloadData() {
         _rateData.value = emptyList()
         lastFetchDate = ""
-        load()
+        viewModelScope.launch {
+            rateRepository.deleteAllRates()
+            load()
+        }
     }
 
     private fun createListItems(response: RateResponse): List<RatesListItem> {
