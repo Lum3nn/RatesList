@@ -39,6 +39,10 @@ class RateListViewModelTest {
                 )
             )
         }
+
+        override suspend fun deleteAllRates() {
+            
+        }
     }
 
     @Test
